@@ -1,4 +1,6 @@
 import app from "./app.js";
+import "./models/Ceo.js";
+import "./models/Question.js";
 
 const PORT = 1000;
 
