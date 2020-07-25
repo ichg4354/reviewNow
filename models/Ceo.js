@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const ceoSchema = new Schema({
   nameOfBuisness: String,
   nameOfOwner: String,
+  email:String,
   createDate: {
     type: Date,
     default: Date.now,

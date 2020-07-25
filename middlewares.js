@@ -1,4 +1,6 @@
-import routes from "./routes"
-export const localsMiddleware = (req, res) => {
-    res.locals.routes = routes
-}
+import routes from "./routes.js";
+
+export const localsMiddleware = (req, res, next) => {
+    res.locals.routes = routes;
+    next();
+};
