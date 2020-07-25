@@ -2,10 +2,11 @@ extends ../views/partials/layout
 
 
 block content
-    form(action=routes.ceoCreate, method="post")
-        input(type="text",name="nameOfBuisness" placeholder="nameOfBuisness")
-        input(type="text",name="nameOfOwner" placeholder="nameOfOwner")
-        input(type="text",name="email", placeholder="email")
-        input(type="text",name="password1" placeholder="password1")
-        input(type="text",name="password2" placeholder="password2")
-        input(type="submit", value="Sign Up Nows")
+    .formContainer
+        form(action=routes.ceoCreate, method="post")
+            input(type="text",name="nameOfBuisness" placeholder="nameOfBuisness")
+            input(type="text",name="nameOfOwner" placeholder="nameOfOwner")
+            input(type="text",name="email", placeholder="email")
+            input(type="text",name="password1" placeholder="password1")
+            input(type="text",name="password2" placeholder="password2")
+            input(type="submit", value="Create Account")
