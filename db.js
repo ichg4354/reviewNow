@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const db = mongoose.connection;
 
-mongoose.connect("mongodb://localhost:27017/myapp", {
+mongoose.connect("mongodb://localhost:27017/reviewNow", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
