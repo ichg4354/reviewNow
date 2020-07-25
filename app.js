@@ -15,5 +15,6 @@ app.use(bodyParser.json());
 app.set("view engine", "pug");
 
 app.use(localsMiddleware);
+
 app.use(mainRouter);
 export default app;
