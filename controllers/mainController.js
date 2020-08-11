@@ -20,6 +20,7 @@ export const postmainMenu = async (req, res) => {
 export const results = async (req, res) => {
   const resultFile = [];
   try {
+    // const results = await MainMenu.find({ mainMenuTarget: "칠리새우" });
     const results = await MainMenu.find({});
     results.forEach((each) => {
       const Review = `${each.mainMenuTarget} === ${each.mainMenuMessage}`;
