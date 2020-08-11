@@ -1,23 +1,25 @@
 import express from "express";
 import routes from "../routes.js";
+import { getCeoCreate, postCeoCreate } from "../controllers/userController.js";
 import {
-  getCeoCreate,
+  getmainMenu,
+  postmainMenu,
   results,
-  postCeoCreate,
-} from "../controllers/userController.js";
-import { main } from "../controllers/mainController.js";
-import { qpg1 } from "../controllers/questionController.js";
+} from "../controllers/mainController.js";
 
 const mainRouter = express.Router();
 
-mainRouter.get(routes.MAIN, main);
-
-mainRouter.get(routes.CUSTOMER, (req, res) => res.send("Customer"));
-
-mainRouter.get(routes.CEOCREATE, getCeoCreate);
-mainRouter.post(routes.CEOCREATE, postCeoCreate);
-
-mainRouter.get(routes.QPG1, qpg1);
-mainRouter.get(routes.RESULTS, results);
+mainRouter.get("/", (req, res) => res.render("questionStart"));
+mainRouter.get("/mainMenu", getmainMenu);
+mainRouter.post("/mainMenu", postmainMenu);
+mainRouter.get("/cleanliness", (req, res) => res.send("SHOW QUESTIONS ABOUT"));
+mainRouter.get("/sideMenu", (req, res) =>
+  res.send("SHOW QUESTIONS ABOUT SIDE MENU")
+);
+mainRouter.get("/4354/results", results);
+mainRouter.get("/thankYou", (req, res) => res.render("thankYou"));
+mainRouter.get("/services", (req, res) =>
+  res.send("SHOW QUESTIONS ABOUT SERVICES")
+);
 
 export default mainRouter;

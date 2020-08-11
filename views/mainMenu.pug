@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+        form(action="/mainMenu" method="post")
+            input(type="text" name="mainMenu_target" placeholder="터치한 후 선택해주세요" list="targetList")
+            datalist(id="targetList")
+                option(value="탕수육")
+                option(value="꿔바로우")
+                option(value="칠리새우")
+                option(value="볶음밥")
+                option(value="짜장면")
+            h3 에서 어떤 문제가 있었는지 한줄로 간단하게 적어주세요!
+            textarea(name="mainMenu_message", cols="40", rows="2")
+            input(type="submit", value="제출하고 상품 받아가세요!!")
+
+	
+
