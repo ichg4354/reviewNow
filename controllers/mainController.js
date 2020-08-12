@@ -77,6 +77,7 @@ export const postcleanliness = async (req, res) => {
   res.redirect("/thankYou");
 };
 
+// FUNCTION
 const getmainMenuResults = async () => {
   const mainMenuFile = [];
   const mainMenuResults = await MainMenu.find({});
@@ -86,6 +87,7 @@ const getmainMenuResults = async () => {
   });
   return mainMenuFile;
 };
+
 const getsideMenuResults = async () => {
   const sideMenuFile = [];
   const sideMenuResults = await SideMenu.find({});
@@ -95,6 +97,7 @@ const getsideMenuResults = async () => {
   });
   return sideMenuFile;
 };
+
 const getservicesResults = async () => {
   const servicesFile = [];
   const servicesResults = await Services.find({});
@@ -104,6 +107,7 @@ const getservicesResults = async () => {
   });
   return servicesFile;
 };
+
 const getcleanlinessResults = async () => {
   const cleanlinessFile = [];
   const cleanlinessResults = await Cleanliness.find({});
@@ -113,6 +117,9 @@ const getcleanlinessResults = async () => {
   });
   return cleanlinessFile;
 };
+
+
+// RESULTS
 export const results = async (req, res) => {
   try {
     let mainMenuFile = await getmainMenuResults();
@@ -130,17 +137,4 @@ export const results = async (req, res) => {
   }
 };
 
-// export const results = async (req, res) => {
-//   const mainMenuFile = [];
-//   try {
-//     const mainMenuResults = await MainMenu.find({});
-//     mainMenuResults.forEach((each) => {
-//       const mainMenuReview = `${each.mainMenuTarget} === ${each.mainMenuMessage}`;
-//       mainMenuFile.push(mainMenuReview);
-//       return;
-//     });
-//     res.render("results", { mainMenuReviews: mainMenuFile });
-//   } catch (e) {
-//     console.log(e);
-//   }
-// };
+
