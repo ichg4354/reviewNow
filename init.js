@@ -4,7 +4,7 @@ import "./models/Question.js";
 
 import "./models/MainMenu.js";
 import "./models/SideMenu.js";
-import "./models/Service.js";
+import "./models/Services.js";
 import "./models/Cleanliness.js";
 
 const PORT = 1000;
