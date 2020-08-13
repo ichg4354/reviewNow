@@ -4,16 +4,23 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
+        link(href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet")
+        link(rel="stylesheet", href="css/styles.css")
+        link(rel="stylesheet", href="css/questions.css")
     body
-        form(action="/services" method="post")
-            input(type="text" name="services_target" placeholder="터치한 후 선택해주세요" list="servicesList" required="true")
-            datalist(id="servicesList")
-                option(value="사장님")
-                option(value="결제해주시는 분")
-                option(value="알바생")
-            h3 에서 어떤 문제가 있었는지 한줄로 간단하게 적어주세요!
-            textarea(name="services_message", cols="40", rows="2" required="true")
-            input(type="submit", value="제출하고 상품 받아가세요!!")
+        main    
+            .main__form
+                form(action="/services" method="post")
+                    input(type="text" name="services_target" placeholder="터치 후 선택" list="servicesList" required="true")
+                    h3 에서
+                    datalist(id="servicesList")
+                        option(value="사장님")
+                        option(value="결제해주시는 분")
+                        option(value="알바생")
+                    input(type="submit", value="클릭하고 상품 받아가세요!!")
+            .main__input
+                h3 어떤 문제가 있었는지 <br>한줄로 간단하게 적어주세요!
+                textarea(name="services_message", cols="40", rows="2" required="true" placeholder="터치 후 여기에 적어주세요")
 
 	
 
