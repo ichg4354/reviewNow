@@ -4,22 +4,31 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        link(rel="stylesheet", href="css/styles.css")
+        link(rel="stylesheet", href="css/questionStart.css")
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     body
         header
-            h1 어디에 문제가 있으셨나요?
+            .header__info
+                span 소요시간 30초 ~ 1분
+            .header__title
+                span 문제점이<br>어디에 있나요?
         main
             div.main__container
                 div.container__startQuestioncol
                     a(href="/mainMenu")
-                        h3 메인메뉴에 문제가 있었어요
+                        span 메인메뉴에 문제가 있었어요
                 div.container__startQuestioncol
                     a(href="/sideMenu")
-                        h3 메인메뉴 외 음식,음료에서 <br>문제가 있었어요(반찬 포함)
+                        span 사이드,반찬,음료에 <br>문제가 있었어요
                 div.container__startQuestioncol
                     a(href="/services")
-                        h3 서비스에 문제가 있었어요
+                        span 서비스에 문제가 있었어요
                 div.container__startQuestioncol
                     a(href="/cleanliness")
-                        h3 청결도에 문제가 있었어요
-
+                        span 청결도에 문제가 있었어요
+                div.container__startQuestioncol
+                    a(href="/cleanliness")
+                        span 문제점 없었고<br>모든게 완벽했어요!
 

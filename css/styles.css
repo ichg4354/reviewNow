@@ -1,0 +1,5 @@
+@import "./reset.css";
+html {
+  font-family: "Jua", sans-serif;
+  padding: 30px 30px;
+}

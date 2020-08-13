@@ -13,7 +13,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.set("view engine", "pug");
-
+app.use("/css", express.static("css"));
 app.use(localsMiddleware);
 
 app.use(mainRouter);
