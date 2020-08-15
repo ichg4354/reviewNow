@@ -1,70 +1,74 @@
-/* BODY CSS */
-
-main {
-  height: 200px;
-  margin-top: 200px;
+html{
+  background: rgb(236,233,230);
+background: linear-gradient(0deg, rgba(236,233,230,1) 0%, rgba(255,255,255,1) 100%);
+color: black;
 }
-/* MAIN FORM CSS */
 .main__form {
+  height: 93vh;
   display: flex;
   flex-direction: row;
-}
-.main__form form {
-  display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
 }
-.main__form h3 {
-  font-size: 25px;
+.main__form h4 {
+  display: inline-block;
+  font-size: 30px;
 }
 
-.main__form input {
-  width: 100px;
+.selectInput {
+  width: 150px;
   margin-right: 5px;
-  height: 40px;
-  background-color: whitesmoke;
+  height: 60px;
+  background-color: lightgray;
   border: none;
   border-radius: 10px;
   padding: 0 5px;
+  margin-bottom: 5px;
 }
-.main__form input:first-child {
-}
-.main__form input:focus {
+.selectInput:focus {
   outline-color: cadetblue;
 }
-.main__form input:placeholder-shown {
+.selectInput:placeholder-shown {
   font-weight: bolder;
-  font-family: "Jua", sans-serif;
-}
-.main__form input:last-child {
-  position: fixed;
-  bottom: 200px;
-  width: 80vw;
-  text-align: center;
-  color: black;
-  box-shadow: 0px 11px 9px 0px rgba(190, 191, 194, 1);
-}
-.main__form input[type="submit"] {
   font-family: "Jua", sans-serif;
   font-size: 20px;
 }
-/* MAIN INPUT CSS */
 
-.main__input h3 {
-  font-size: 25px;
+h3 {
+  font-size: 30px;
 }
 
-.main__input textarea {
+.textInput {
   margin-top: 30px;
-  width: 80vw;
+  width: 100%;
   font-size: 15px;
   font-family: "Jua", sans-serif;
   border: none;
-  background-color: whitesmoke;
+  background-color: lightgray;
   height: 50px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 5 10px;
+}
+.textInput:placeholder-shown{
+    font-weight: bolder;
+  font-family: "Jua", sans-serif;
+  font-size: 20px;
 }
 
-.main__input textarea:focus {
+.textInput:focus {
   outline-color: cadetblue;
+}
+.submitInput {
+  color: black;
+  box-shadow: 0px 11px 9px 0px rgba(190, 191, 194, 1);
+  width: 100%;
+  border: none;
+  height: 40px;
+  background-color: cornflowerblue;
+  border-radius: 15px;
+}
+.submitInput[type="submit"] {
+  font-family: "Jua", sans-serif;
+  font-size: 20px;
 }

@@ -1,4 +1,7 @@
-
+html{
+  background: rgb(236,233,230);
+background: linear-gradient(0deg, rgba(236,233,230,1) 0%, rgba(255,255,255,1) 100%);
+}
 /* HEADER CSS */
 header .header__info {
   margin-bottom: 20px;

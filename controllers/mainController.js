@@ -23,12 +23,13 @@ export const getservices = (req, res) => {
 // POST
 export const postmainMenu = async (req, res) => {
   const { mainMenu_target, mainMenu_message } = req.body;
+  console.log(req.body);
   try {
     const mainMenu_review = await MainMenu.create({
-      mainMenuTarget: mainMenu_target,
       mainMenuMessage: mainMenu_message,
+      mainMenuTarget: mainMenu_target,
     });
-    console.log(mainMenu_review);
+    console.log(mainMenu_message);
   } catch (e) {
     console.log(e);
   }
@@ -118,7 +119,6 @@ const getcleanlinessResults = async () => {
   return cleanlinessFile;
 };
 
-
 // RESULTS
 export const results = async (req, res) => {
   try {
@@ -136,5 +136,3 @@ export const results = async (req, res) => {
     console.log(e);
   }
 };
-
-
