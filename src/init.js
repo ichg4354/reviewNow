@@ -6,8 +6,10 @@ import "./models/MainMenu.js";
 import "./models/SideMenu.js";
 import "./models/Services.js";
 import "./models/Cleanliness.js";
+import dotenv from "dotenv"
+dotenv.config()
 
-const PORT = 1000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () =>
   console.log(`✅  Listening to http://localhost:${PORT}`)
