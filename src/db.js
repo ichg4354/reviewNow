@@ -7,7 +7,7 @@ const db = mongoose.connection;
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
 // });
-dotenv.config()
+dotenv.config();
 console.log(process.env.dbName);
 
 mongoose.connect(
