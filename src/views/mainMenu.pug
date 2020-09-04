@@ -11,10 +11,17 @@ html(lang="en")
         main
             .main__form
                 form(action="/mainMenu" method="post")
-                    input(type="text" name="mainMenu_target" placeholder="터치 후 선택" list="mainMenuList" required="true" class="selectInput")
+                    <select name="mainMenu_target" class="selectInput">
+                        <option value="volvo">터치 후 선택</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
                     h4 에서
                     h3 어떤 문제가 있었는지<br> 한줄로 간단하게 적어주세요!
                     textarea(name="mainMenu_message", cols="40", rows="2" required="true" placeholder="터치 후 여기에 적어주세요" class="textInput")
+                    
                     input(type="submit" ,value="클릭하고 상품 받아가세요!!" class="submitInput")
                     datalist(id="mainMenuList")
                         option(value="탕수육")
