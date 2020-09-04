@@ -1,7 +1,22 @@
+@import "./reset.css";
+html {
+  font-family: "Jua", sans-serif;
+}
+
 body {
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.body__main__text span {
+  font-size: 30px;
+}
+
+.body__my__info {
+  position: fixed;
+  bottom: 30px;
 }
