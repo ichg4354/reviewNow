@@ -2,6 +2,7 @@ import MainMenu from "../models/MainMenu.js";
 import SideMenu from "../models/SideMenu.js";
 import Services from "../models/Services.js";
 import Cleanliness from "../models/Cleanliness.js";
+import Suggestions from "../models/Suggestions.js";
 
 // GET
 export const getmainMenu = (req, res) => {
@@ -18,6 +19,10 @@ export const getcleanliness = (req, res) => {
 
 export const getservices = (req, res) => {
   res.render("services");
+};
+
+export const getsuggestions = (req, res) => {
+  res.render("suggestions");
 };
 
 // POST
@@ -78,6 +83,20 @@ export const postcleanliness = async (req, res) => {
   res.redirect("/thankYou");
 };
 
+export const postsuggestions = async (req, res) => {
+  const { suggestions_target, suggestions_message } = req.body;
+  try {
+    const suggestions_review = await Suggestions.create({
+      suggestionsTarget: suggestions_target,
+      suggestionsMessage: suggestions_message,
+    });
+    console.log(suggestions_review);
+  } catch (e) {
+    console.log(e);
+  }
+  res.redirect("/thankYou");
+};
+
 // FUNCTION
 const getmainMenuResults = async () => {
   const mainMenuFile = [];
@@ -119,6 +138,16 @@ const getcleanlinessResults = async () => {
   return cleanlinessFile;
 };
 
+const getsuggestionsResults = async () => {
+  const suggestionsFile = [];
+  const suggestionsResults = await Suggestions.find({});
+  suggestionsResults.forEach((each) => {
+    const suggestionsReview = `${each.suggestionsTarget} === ${each.suggestionsMessage}`;
+    suggestionsFile.push(suggestionsReview);
+  });
+  return suggestionsFile;
+};
+
 // RESULTS
 export const results = async (req, res) => {
   try {
@@ -126,11 +155,13 @@ export const results = async (req, res) => {
     let sideMenuFile = await getsideMenuResults();
     let servicesFile = await getservicesResults();
     let cleanlinessFile = await getcleanlinessResults();
+    let suggestionsFile = await getsuggestionsResults();
     res.render("results", {
       mainMenuReviews: mainMenuFile,
       sideMenuReviews: sideMenuFile,
       servicesReviews: servicesFile,
       cleanlinessReviews: cleanlinessFile,
+      suggestionsReviews: suggestionsFile,
     });
   } catch (e) {
     console.log(e);
