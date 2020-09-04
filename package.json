@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --delay 3 node src/init.js"
+    "start": "nodemon --delay 3 node src/init.js",
+    "publish": "git push heroku master"
   },
   "repository": {
     "type": "git",
