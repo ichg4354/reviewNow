@@ -30,6 +30,7 @@ html {
   margin-bottom: 5px;
   font-family: "Jua", sans-serif;
   font-size: large;
+  color: gray;
 }
 .selectInput:focus {
   outline-color: cadetblue;
