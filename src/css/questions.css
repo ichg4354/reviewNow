@@ -64,6 +64,9 @@ h3 {
   font-family: "Jua", sans-serif;
   font-size: 20px;
 }
+.textInput::placeholder {
+  color: gray;
+}
 
 .textInput:focus {
   outline-color: cadetblue;
