@@ -29,6 +29,7 @@ html {
   padding: 0 5px;
   margin-bottom: 5px;
   font-family: "Jua", sans-serif;
+  font-size: large;
 }
 .selectInput:focus {
   outline-color: cadetblue;
@@ -54,6 +55,8 @@ h3 {
   margin-bottom: 20px;
   border-radius: 10px;
   padding: 5 10px;
+  line-height: 50px;
+  padding-left: 5px;
 }
 .textInput:placeholder-shown {
   font-weight: bolder;
