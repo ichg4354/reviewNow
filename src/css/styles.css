@@ -3,3 +3,7 @@ html {
   font-family: "Jua", sans-serif;
   padding: 30px 30px;
 }
+.main__alert {
+  display: flex;
+  justify-content: center;
+}
